@@ -1,0 +1,205 @@
+body{ 
+  margin: 0 0; 
+  padding: 0 0; 
+  box-sizing: border-box; 
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: black; 
+  cursor: default; 
+  word-wrap: break-word;
+  } 
+  .todo{ 
+  margin: 0 auto; 
+  width: 100%; 
+  } 
+  .header{ 
+  background-color: #5B7EFA;
+  /*background-color: #4ce92c; */
+  /* background-color: #faea5b; */
+  /* background-color: #fa955b; */
+  /* background-color: #fa5b5b; */
+  height: 16rem; 
+  width: 100%; 
+  display: flex; 
+  } 
+  .data{ 
+  width: 50%; 
+  display: flex; 
+  flex-direction: column; 
+  padding-left: 5.5rem; 
+  } 
+  .data .day{ 
+  display: flex; 
+  align-items: flex-end; 
+  color: white; 
+  height: 60%; 
+  font-size: 6em; 
+  } 
+  .data .month{ 
+  height: 40%; 
+  font-size: 3em; 
+  opacity: 0.8; 
+  color: white; 
+  } 
+  .add{ 
+  display: flex; 
+  height: 9rem; 
+  } 
+  .add .input-name{ 
+  width: 80%; 
+  height: 8,6rem; 
+  border: none; 
+  font-size: 4em; 
+  padding-left: 3rem; 
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: black; 
+  cursor: text; 
+  border-bottom: 1px solid #D3D3D3;
+  } 
+  .add .input-name:focus{ 
+  outline: 0; 
+  } 
+  .button-add{ 
+  width: 20%; 
+  height: 100%; 
+  background-color: #7AE7FF;
+  /* background-color: rgb(94, 241, 94); */
+  /* background-color: #fff67a; */
+  /* background-color: #ffb67a; */
+  /* background-color: #ff7a7a; */
+  color: white; 
+  font-size: 7em; 
+  text-align: center; 
+  cursor: pointer; 
+  transition: 0.5s;
+  } 
+  .button-add:hover{
+    background-color: #46b5ff;
+    /*background-color: #4cff46;*/
+    /* background-color: #fff346; */
+    /* background-color: #ff9f46; */
+    /* background-color: #ff4646; */
+  }
+  .task{ 
+  width: 100%; 
+  display: flex; 
+  align-items: center; 
+  min-height: 10rem; 
+  border-bottom: 1px solid #D3D3D3; 
+  } 
+  .task input[type="checkbox"]{ 
+  transform: scale(3.5);
+  margin-left: 4rem; 
+  }
+  .task input[type="checkbox"] + #task-text{
+    transition: 1s ease;
+  }
+  .task input[type="checkbox"]:checked + #task-text{
+    text-decoration: line-through;
+    text-decoration-color: #858585;
+    color: #858585;
+  }
+  #task-text{
+    font-family: 'Noto Sans', sans-serif; 
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    border: none;
+    width: 65%;
+    min-height: 6rem;
+    font-size: 4em;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    outline: none;
+  }
+  .icons{ 
+  width: 15%; 
+  height: 100%;
+  font-size: 3.5em; 
+  display: flex; 
+  justify-content: space-between;
+  text-align: center;
+  align-items: center; 
+  } 
+  .icons .fa{
+  cursor: pointer;
+  height: 4rem;
+  padding-top: 4%;
+  width: 40%;
+  border-radius: 50%;
+  transition: 0.5s;
+  }
+  .icons .fa-trash-o{ 
+  color: red; 
+  }
+  .fa-trash-o:hover{
+    color: #858585;
+  }
+  .fa-thumbs-o-up:hover, .fa-pencil:hover{
+    color: #5B7EFA;
+  }
+  .nav-toggle { 
+  user-select: none; 
+  cursor: pointer; 
+  height: 6rem; 
+  right: 2rem; 
+  position: fixed; 
+  top: 5rem; 
+  width: 8rem; 
+  z-index: 2;
+  } 
+  .nav-toggle:hover { opacity: 0.8; } 
+  .nav-toggle .nav-toggle-bar, .nav-toggle .nav-toggle-bar::after, .nav-toggle .nav-toggle-bar::before { 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  transition: all 0.5s ease; 
+  background: #fff; 
+  content: ''; 
+  height: 1rem; 
+  width: 100%; 
+  } 
+  .nav-toggle .nav-toggle-bar { margin-top: 0; } 
+  .nav-toggle .nav-toggle-bar::after { margin-top: 2rem; } 
+  .nav-toggle .nav-toggle-bar::before { margin-top: -2rem; } 
+  .nav-toggle.expanded .nav-toggle-bar { background: transparent; } 
+  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before { 
+  background: white; 
+  margin-top: 0; 
+  } 
+  .nav-toggle.expanded .nav-toggle-bar::after { 
+  transform: rotate(45deg); 
+  } 
+  .nav-toggle.expanded .nav-toggle-bar::before { 
+  transform: rotate(-45deg); 
+  } 
+  .nav { 
+  transition: right 0.5s ease; 
+  background: #7AE7FF; 
+  color: white; 
+  cursor: pointer; 
+  font-size: 2rem; 
+  height: 100vh; 
+  right: -100%; 
+  padding: 2rem 2rem 2rem 6rem; 
+  position: fixed; 
+  top: 0; 
+  width: 30rem; 
+  z-index: 1; 
+  } 
+  .nav.expanded { right: 0; } 
+  .nav ul { 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  }
+  .nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 3em;
+  transition: 0.3s;
+  }
+  .nav ul li a:hover{
+    color: rgb(223, 223, 223);
+  }

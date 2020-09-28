@@ -1,0 +1,32 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+.header{ 
+    height: 16rem; 
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+    cursor: default;
+}
+.head{
+    padding-left: 5.5rem;
+    color: #fff;
+    font-size: 8em;
+}
+.button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    border: 1px solid rgb(233, 233, 233);;
+    padding-left: 6rem;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 5em;
+}
+.button:hover{
+    background-color: rgb(233, 233, 233);
+}
